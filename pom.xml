@@ -16,5 +16,11 @@
 		<module>andymall-ware</module>
 		<module>andymall-coupon</module>
 		<module>andymall-product</module>
+		<module>andymall-gateway</module>
+		<module>renren-fast</module>
+		<module>renren-generator</module>
+		<module>andymall-common</module>
+		<module>andymall-third-party</module>
+		<module>andymall-search</module>
 	</modules>
 </project>
