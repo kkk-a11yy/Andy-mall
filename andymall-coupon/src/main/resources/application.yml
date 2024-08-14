@@ -2,7 +2,7 @@
 #  datasource:
 #    username: root
 #    password: root
-#    url: jdbc:mysql://192.168.101.104:3306/andymall_sms
+#    url: jdbc:mysql://192.168.31.104:3306/andymall_sms
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #  cloud:
 #    nacos:
@@ -27,3 +27,4 @@
 #      exposure:
 #        include: '*'
 #
+# 这些都已经配置到了nacos  coupon命名空间的 mybatis.yml datasource.yml other.yml(只有这几个有用的) andymall-coupon.properties

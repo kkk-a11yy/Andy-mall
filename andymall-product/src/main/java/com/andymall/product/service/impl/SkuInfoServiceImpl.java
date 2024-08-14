@@ -4,19 +4,34 @@ import com.andymall.common.utils.PageUtils;
 import com.andymall.common.utils.Query;
 import com.andymall.product.dao.SkuInfoDao;
 import com.andymall.product.entity.SkuInfoEntity;
-import com.andymall.product.service.SkuInfoService;
+import com.andymall.product.service.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.Map;
 
 
 @Service("skuInfoService")
 public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> implements SkuInfoService {
+
+    @Resource
+    private SkuImagesService skuImagesService;
+
+    @Resource
+    private SpuInfoDescService spuInfoDescService;
+
+    @Resource
+    private AttrGroupService attrGroupService;
+
+    @Resource
+    private SkuSaleAttrValueService skuSaleAttrValueService;
+
+
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -89,5 +104,6 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> i
 
         return new PageUtils(page);
     }
+
 
 }
